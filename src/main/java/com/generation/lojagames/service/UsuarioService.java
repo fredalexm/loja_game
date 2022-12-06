@@ -1,5 +1,6 @@
 package com.generation.lojagames.service;
 
+import com.generation.lojagames.model.UsuarioLogin;
 import org.apache.tomcat.util.codec.binary.Base64;
 import com.generation.lojagames.model.Usuario;
 import com.generation.lojagames.repository.UsuarioRepository;
@@ -35,6 +36,15 @@ public class UsuarioService {
         usuario.setSenha(criptografarSenha(usuario.getSenha()));
 
         return Optional.ofNullable(usuarioRepository.save(usuario));
+    }
+
+    public Optional<Usuario> atualizarUsuario(Usuario usuario){
+        return null;
+    }
+
+
+    public Optional<UsuarioLogin> autenticarUsuario(Optional<UsuarioLogin> usuarioLogin) {
+        return null;
     }
 
     private int calcularIdade(LocalDate dataNascimento){
